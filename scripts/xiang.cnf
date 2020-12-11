@@ -1,0 +1,49 @@
+if not platform: platform = '2'
+
+import os
+ld_lib_path = 'LD_LIBRARY_PATH=%s/epics/lib/linux-x86_64:%s/pcas/lib/linux-x86_64'%((os.getenv('CONDA_PREFIX'),)*2)
+epics_env = 'EPICS_PVA_ADDR_LIST=172.21.156.255'+' '+ld_lib_path
+hsd_epics_env = 'EPICS_PVA_ADDR_LIST=172.21.156.255'+' '+ld_lib_path
+
+conda_rel = os.environ['CONDA_DEFAULT_ENV']
+
+collect_host = 'drp-neh-ctl001'
+
+groups = '2'
+hutch, user, password = ('tmo', 'tmoopr', 'pcds')
+auth = ' --user {:} --password {:} '.format(user,password)
+url  = ' --url https://pswww.slac.stanford.edu/ws-auth/lgbk/ '
+cdb  = 'https://pswww.slac.stanford.edu/ws-auth/configdb/ws'
+
+prom_dir = '/reg/g/psdm/psdatmgr/etc/config/prom' # Prometheus
+data_dir = '/ffb01/data'
+
+task_set = 'taskset 0xffbfeffbfe '
+std_opts = '-P '+hutch+' -C '+collect_host+' -M '+prom_dir+' -o '+data_dir+' -d /dev/datadev_%d'
+ld_lib_path = 'LD_LIBRARY_PATH=%s/epics/lib/linux-x86_64:%s/pcas/lib/linux-x86_64'%((os.getenv('CONDA_PREFIX'),)*2)
+epics_env = 'EPICS_PVA_ADDR_LIST=172.21.156.255'+' '+ld_lib_path
+ea_cfg = '/reg/g/pcds/dist/pds/tmo/misc/epicsArch.txt'
+ea_cmd0 = task_set+'epicsArch '+(std_opts%1)+' -k batching=no '+ea_cfg
+
+#
+#  drp variables
+#
+prom_dir = '/reg/g/psdm/psdatmgr/etc/config/prom' # Prometheus
+data_dir = '/ffb01/data'
+
+task_set = 'taskset 0xffbfeffbfe '
+std_opts = '-P '+hutch+' -C '+collect_host+' -M '+prom_dir+' -o '+data_dir+' -d /dev/datadev_%d'
+
+drp_cmd0 = task_set+'drp '      +(std_opts%0)+' -k batching=no '
+drp_cmd1 = task_set+'drp '      +(std_opts%1)+' -k batching=no '
+procmgr_config = [
+ { id:'groupca',  flags:'s', conda:conda_rel, env:epics_env, cmd:'groupca DAQ:NEH 0 '+groups},
+ { id:'procstat', flags:'p', conda:conda_rel,                cmd:'procstat p'+platform+'.cnf.last'},
+
+ { host: 'drp-neh-cmp011', id:'teb0',        flags:'spu', conda:conda_rel, cmd:'teb '+'-P '+hutch+' -C '+collect_host+' -M '+prom_dir},
+
+ { host: 'drp-neh-cmp002', id:'epics_0',     flags:'spu', conda:conda_rel, env:epics_env, cmd:ea_cmd1+' -l 0x1'},
+
+ { host: collect_host,     id:'control',     flags:'spu', conda:conda_rel, env:epics_env, cmd:f'control -P {hutch} -B DAQ:NEH -x 0 -C BEAM {auth} {url} -d {cdb}/configDB -r /dev/null -t trigger'},
+ {                         id:'control_gui', flags:'p',   conda:conda_rel,                cmd:f'control_gui -H {collect_host} --uris {cdb} --expert {auth} --loglevel WARNING'},
+]

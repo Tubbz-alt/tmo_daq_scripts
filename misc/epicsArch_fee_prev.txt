@@ -1,0 +1,43 @@
+# epicsArch.txt
+#
+# Comments begin with # and not #*
+# PV descriptions begin with either * or #*
+# PV names do not begin with # nor *
+# PV names are followed by provider (ca or pva) on the same line
+# PV descriptions must immediately precede a PV name line
+#
+
+*Keithley_gmd
+EM1K0:GMD:ETM:01:Reading
+
+# Also in BLD:
+*AvgPulseIntensity_gmd
+EM1K0:GMD:HPS:AvgPulseIntensity
+
+# GMD El FC
+*PhotonRelEN_gmd
+EM1K0:GMD:HPS:PhotonRelEN
+
+*milliJoulesPerPulse_gmd
+EM1K0:GMD:HPS:milliJoulesPerPulse
+
+*Keithley_1_xgmd
+EM2K0:XGMD:ETM:01:Reading
+
+*Keithley_2_xgmd
+EM2K0:XGMD:ETM:02:Reading
+
+# Also in BLD:
+*AvgPulseIntensity_xgmd
+EM2K0:XGMD:HPS:AvgPulseIntensity
+
+# sum of both electrodes e1 and e1
+*PhotonRelEN_xgmd
+EM2K0:XGMD:HPS:PhotonRelEN
+
+*milliJoulesPerPulse_xgmd
+EM2K0:XGMD:HPS:milliJoulesPerPulse
+
+# (Position difference e1- e2)
+*PhotonPOSY_xgmd
+EM2K0:XGMD:HPS:PhotonPOSY

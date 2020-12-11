@@ -1,0 +1,203 @@
+# epicsArch.txt
+#
+# Comments begin with # and not #*
+# PV descriptions begin with either * or #*
+# PV names do not begin with # nor *
+# PV names are followed by provider (ca or pva) on the same line
+# PV descriptions must immediately precede a PV name line
+#
+
+*Keithley_gmd
+EM1K0:GMD:ETM:01:Reading
+
+# GMD El FC
+*PhotonRelEN_gmd
+EM1K0:GMD:HPS:PhotonRelEN
+
+# BLD gmd:energy
+#*milliJoulesPerPulse_gmd
+#EM1K0:GMD:HPS:milliJoulesPerPulse
+
+*Keithley_1_xgmd
+EM2K0:XGMD:ETM:01:Reading
+
+*Keithley_2_xgmd
+EM2K0:XGMD:ETM:02:Reading
+
+# sum of both electrodes e1 and e1
+*PhotonRelEN_xgmd
+EM2K0:XGMD:HPS:PhotonRelEN
+
+# BLD xgmd:energy
+#*milliJoulesPerPulse_xgmd
+#EM2K0:XGMD:HPS:milliJoulesPerPulse
+
+# BLD xgmd:ypos
+## (Position difference e1- e2)
+#*PhotonPOSY_xgmd
+#EM2K0:XGMD:HPS:PhotonPOSY
+
+
+#>>Machine PV:
+*Machine
+SIOC:SYS0:ML00:AO628
+
+#>>GMD:
+# (Keithley current)
+*GMD_Keithley_Sum
+EM1K0:GMD:HPS:KeithleySum
+# (Temp)
+*GMD_Temp_rbv
+EM1K0:GMD:RTD:1:TEMP_RBV
+# (CS lookuptable)
+*GMD_CrossSection
+EM1K0:GMD:HPS:CrossSection
+# (MC lookuptable)
+*GMD_MeanCharge
+EM1K0:GMD:HPS:MeanCharge
+# (SRG pressure mbar)
+*GMD_PressureCalc
+EM1K0:GMD:GSR:1:Calib:Pressure:Calc
+# (gas type GMD)
+*GMD_GasType_rbv
+EM1K0:GMD:GASTYPE_RBV
+# BLD gmd:avgIntensity
+## (ave GMD pulse energy mJ)
+#*GMD_AvgPulseIntensity
+#EM1K0:GMD:HPS:AvgPulseIntensity
+# BLD gmd:energy
+## (Number of Photons per Pulse)
+#*GMD_AvgPhotonsPerPulse
+#EM1K0:GMD:HPS:AvgPhotonsPerPulse
+
+# The following are handled by PvaDetector
+## electron signal
+#EM1K0:GMD:HPS:STR0:STREAM_SHORT0
+## ion signal
+#EM1K0:GMD:HPS:STR0:STREAM_SHORT2
+
+#>>GMD Electronic Attenuators:
+## The following return strings, which are notsupported by EpicsArch
+## (Ion Amplifier)
+#*GMD_Amp_PreAttn1
+#EM1K0:GMD:HPS:AMP_PREATTN1
+## (Ion Amplifier)
+#*GMD_Amp_PosAttn1
+#EM1K0:GMD:HPS:AMP_POSATTN1
+## (Electron 1 Amplifier)
+#*GMD_Amp_PreAttn2
+#EM1K0:GMD:HPS:AMP_PREATTN2
+## (Electron 1 Amplifier)
+#*GMD_Amp_PosAttn2
+#EM1K0:GMD:HPS:AMP_POSATTN2
+## (Electron 2 Amplifier)
+#*GMD_Amp_PreAttn3
+#EM1K0:GMD:HPS:AMP_PREATTN3
+## (Electron 2 Amplifier)
+#*GMD_Amp_PosAttn3
+#EM1K0:GMD:HPS:AMP_POSATTN3
+
+#>>GMD Voltages: (note GMD voltages are labeled XGMD only differ in channel #)
+# (GMD Electron Multiplier)
+*GMD_ElectronMultiplier
+EM2K0:XGMD:SHV:01:M0:C15:VoltageMeasure
+# (GMD Ion Mesh)
+*GMD_IonMesh
+EM2K0:XGMD:SHV:01:M0:C14:VoltageMeasure
+# (GMD Electron Mesh)
+*GMD_ElectronMesh
+EM2K0:XGMD:SHV:01:M0:C0:VoltageMeasure
+# (GMD Electron Faraday Cup)
+*GMD_ElectronFaradayCup
+EM2K0:XGMD:SHV:01:M0:C1:VoltageMeasure
+
+#>>XGMD:
+# (Keithley current)
+*XGMD_KeithleySum
+EM2K0:XGMD:HPS:KeithleySum
+# (Temp)
+*XGMD_Temp
+EM2K0:XGMD:RTD:1:TEMP_RBV
+# (CS lookuptable)
+*XGMD_CrossSection
+EM2K0:XGMD:HPS:CrossSection
+# (MC lookuptable)
+*XGMD_MeanCharge
+EM2K0:XGMD:HPS:MeanCharge
+# (SRG pressure mbar)
+*XGMD_Pressure
+EM2K0:XGMD:GSR:1:Calib:Pressure:Calc
+# (gas type XGMD)
+*XGMD_GasType
+EM2K0:XGMD:GASTYPE_RBV
+# BLD xgmd:avgIntensity
+## (ave pulse energy mJ)
+#*XGMD_AvgPulseIntensity
+#EM2K0:XGMD:HPS:AvgPulseIntensity
+# BLD xgmd:energy
+## (Number of Photons per Pulse)
+#*XGMD_AvgPhotonsPerPulse
+#EM2K0:XGMD:HPS:AvgPhotonsPerPulse
+
+# These are handled by PvaDetector
+#EM2K0:XGMD:HPS:STR0:STREAM_SHORT0: electron 1 signal
+#EM2K0:XGMD:HPS:STR0:STREAM_SHORT1: electron 2 signal
+#EM2K0:XGMD:HPS:STR0:STREAM_SHORT2: ion signal
+
+#>>XGMD Electronic Attenuator:
+## The following return strings, which are notsupported by EpicsArch
+## (Ion Amplifier)
+#*XGMD_PreAttn1
+#EM2K0:XGMD:HPS:AMP_PREATTN1
+## (Ion Amplifier)
+#*XGMD_PosAttn1
+#EM2K0:XGMD:HPS:AMP_POSATTN1
+## (Electron 1 Amplifier)
+#*XGMD_PreAttn2
+#EM2K0:XGMD:HPS:AMP_PREATTN2
+## (Electron 1 Amplifier)
+#*XGMD_PosAttn2
+#EM2K0:XGMD:HPS:AMP_POSATTN2
+## (Electron 2 Amplifier)
+#*XGMD_PreAttn3
+#EM2K0:XGMD:HPS:AMP_PREATTN3
+## (Electron 2 Amplifier)
+#*XGMD_PosAttn3
+#EM2K0:XGMD:HPS:AMP_POSATTN3
+
+#>>XGMD Voltages:
+# (XGMD Electron Multiplier)
+*XGMD_ElectronMultiplier
+EM2K0:XGMD:SHV:01:M0:C13:VoltageMeasure
+# (XGMD Ion Mesh)
+*XGMD_IonMesh
+EM2K0:XGMD:SHV:01:M0:C12:VoltageMeasure
+# (XGMD Electron Mesh)
+*XGMD_ElectronMesh
+EM2K0:XGMD:SHV:01:M0:C2:VoltageMeasure
+# (XGMD Electron Faraday Cup)
+*XGMD_ElectronFaradayCup
+EM2K0:XGMD:SHV:01:M0:C3:VoltageMeasure
+
+#>>Gas Attenuator
+# (calc gas att transmission)
+*GasAttenTrans
+AT1K0:GAS:TRANS_RBV
+# (pressure set point)
+*PressureSetPt
+AT1K0:GAS:TRANS_SP_RBV
+# (VCN70 needle valve open in %)
+*VCN70_PosReq
+AT1K0:GAS:VCN:70:POS_REQ
+# (Variable Aperture 1)
+*VariableAperature1
+AT1K0:GAS:MAA:01:SET
+# (Variable Aperture 2)
+*VariableAperature2
+AT1K0:GAS:MAA:02:SET
+# (Variable Aperture 3)
+*VariableAperature3
+AT1K0:GAS:MAA:03:SET
+# (Variable Aperture 4)
+*VariableAperature4
+AT1K0:GAS:MAA:04:SET
