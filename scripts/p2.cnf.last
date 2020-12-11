@@ -1,0 +1,118 @@
+# --- automatically generated file - DO NOT EDIT -----------------------------
+# COMMAND: /cds/home/c/claus/lclsii/daq/test/lcls2-201016/install/bin/procmgr start fee.cnf -o /cds/group/pcds/pds/fee/logfiles
+# DATE: Fri Nov 20 10:59:59 2020
+procmgr_macro['CORESIZE'] = '0'
+procmgr_macro['HOST'] = 'tmo-daq'
+procmgr_macro['LOGPATH'] = '/cds/group/pcds/pds/fee/logfiles'
+procmgr_macro['USER'] = 'tmoopr'
+platform = '2'
+# ----------------------------------------------------------------------------
+if not platform: platform = '2'
+
+import os
+ld_lib_path = 'LD_LIBRARY_PATH=%s/epics/lib/linux-x86_64:%s/pcas/lib/linux-x86_64'%((os.getenv('CONDA_PREFIX'),)*2)
+epics_env = 'EPICS_PVA_ADDR_LIST=172.21.156.255'+' '+ld_lib_path
+hsd_epics_env = 'EPICS_PVA_ADDR_LIST=172.21.156.255'+' '+ld_lib_path
+
+conda_rel = os.environ['CONDA_DEFAULT_ENV']
+
+#collect_host = os.uname()[1]
+collect_host = 'drp-neh-ctl001'
+
+groups = '2 5'
+hutch, user, password = ('tmo', 'tmoopr', 'pcds')
+auth = ' --user {:} --password {:} '.format(user,password)
+url  = ' --url https://pswww.slac.stanford.edu/ws-auth/lgbk/ '
+cdb  = 'https://pswww.slac.stanford.edu/ws-auth/configdb/ws'
+
+#
+#  drp variables
+#
+prom_dir = '/cds/group/psdm/psdatmgr/etc/config/prom' # Prometheus
+data_dir = '/ffb01/data'
+
+task_set = 'taskset 0xffbfeffbfe '
+std_opts = '-P '+hutch+' -C '+collect_host+' -M '+prom_dir+' -o '+data_dir+' -d /dev/datadev_%d'
+
+drp_cmd0 = task_set+'drp '      +(std_opts%0)+' -k batching=no ' #,forceEnet=yes '
+drp_cmd1 = task_set+'drp '      +(std_opts%1)+' -k batching=no ' #,forceEnet=yes '
+pva_cmd0 = task_set+'drp_pva '  +(std_opts%0)+' -k batching=no ' #,forceEnet=yes '
+pva_cmd1 = task_set+'drp_pva '  +(std_opts%1)+' -k batching=no ' #,forceEnet=yes '
+bld_cmd0 = task_set+'drp_bld '  +(std_opts%0)+' -k batching=no,interface=eno1 ' #,forceEnet=yes '
+bld_cmd1 = task_set+'drp_bld '  +(std_opts%1)+' -k batching=no,interface=eno1 ' #,forceEnet=yes '
+
+ea_cfg = '/cds/group/pcds/dist/pds/tmo/misc/epicsArch_fee.txt'
+ea_cmd0 = task_set+'epicsArch '+(std_opts%1)+' -k batching=no '+ea_cfg #,forceEnet=yes '+ea_cfg
+ea_cmd1 = task_set+'epicsArch '+(std_opts%1)+' -k batching=no '+ea_cfg #,forceEnet=yes '+ea_cfg
+
+#
+#  ami variables
+#
+heartbeat_period = 1000 # units are ms
+
+ami_workers_per_node = 4
+ami_worker_nodes = ["drp-neh-cmp013"]
+ami_num_workers = len(ami_worker_nodes)
+ami_manager_node = "drp-neh-cmp016"
+
+# procmgr FLAGS: <port number> static port number to keep executable
+#                              running across multiple start/stop commands.
+#                "X" open xterm
+#                "s" send signal to child when stopping
+#
+# HOST       UNIQUEID      FLAGS  COMMAND+ARGS
+# list of processes to run
+#   required fields: id, cmd
+#   optional fields: host, port, flags, conda, env, rtprio
+#     flags:
+#        'x' or 'X'  -> xterm: open small or large xterm for process console
+#        's'         -> stop: sends ctrl-c to process
+#        'u'         -> uniqueid: use 'id' as detector alias (supported by acq, cam, camedt, evr, and simcam)
+
+procmgr_config = [
+# {                         id:'xpmpva' ,     flags:'s',   conda:conda_rel, env:epics_env, cmd:'xpmpva DAQ:NEH:XPM:0 DAQ:NEH:XPM:1'},
+ {                         id:'groupca',     flags:'s',   conda:conda_rel, env:epics_env, cmd:'groupca DAQ:NEH 0 '+groups+' --prod'},
+ {                         id:'procstat',    flags:'p',   conda:conda_rel,                cmd:'procstat p'+platform+'.cnf.last'},
+
+ { host: collect_host,     id:'control',     flags:'spu', conda:conda_rel, env:epics_env, cmd:f'control -P {hutch} -B DAQ:NEH -x 0 -C BEAM {auth} {url} -d {cdb}/configDB -t trigger -S 1'},
+ {                         id:'control_gui', flags:'p',   conda:conda_rel,                cmd:f'control_gui -H {collect_host} --uris {cdb} --expert {auth} --loglevel WARNING'},
+
+ { host: 'drp-neh-cmp016', id:'teb0',        flags:'spu', conda:conda_rel,                cmd:task_set+'teb '+'-P '+hutch+' -C '+collect_host+' -M '+prom_dir}, #+' -k forceEnet=yes'},
+
+ { host: 'drp-neh-cmp014', id:'timing_0',    flags:'spu', conda:conda_rel,                cmd:drp_cmd1+' -l 0x1 -D ts'},
+
+ { host: 'drp-neh-cmp014', id:'bld_0',       flags:'spu', conda:conda_rel, env:epics_env, cmd:bld_cmd1+' -l 0x2 -D ebeam,gmd,xgmd'},
+
+ { host: 'drp-neh-cmp014', id:'epics_0',     flags:'spu', conda:conda_rel, env:epics_env, cmd:ea_cmd1+' -l 0x4'},
+
+ { host: 'drp-neh-cmp014', id:'gmdstr0_0',   flags:'spu', conda:conda_rel, env:epics_env, cmd:pva_cmd1+' -l 0x8 ca/EM1K0:GMD:HPS:STR0:STREAM_SHORT0'},  # Electron waveforms
+ { host: 'drp-neh-cmp015', id:'gmdstr2_0',   flags:'spu', conda:conda_rel, env:epics_env, cmd:pva_cmd0+' -l 0x1 ca/EM1K0:GMD:HPS:STR0:STREAM_SHORT2'},  # Ion waveforms
+ { host: 'drp-neh-cmp015', id:'xgmdstr0_0',  flags:'spu', conda:conda_rel, env:epics_env, cmd:pva_cmd0+' -l 0x2 ca/EM2K0:XGMD:HPS:STR0:STREAM_SHORT0'}, # Electron 1 waveforms
+ { host: 'drp-neh-cmp015', id:'xgmdstr1_0',  flags:'spu', conda:conda_rel, env:epics_env, cmd:pva_cmd0+' -l 0x4 ca/EM2K0:XGMD:HPS:STR0:STREAM_SHORT1'}, # Electron 2 waveforms
+ { host: 'drp-neh-cmp015', id:'xgmdstr2_0',  flags:'spu', conda:conda_rel, env:epics_env, cmd:pva_cmd0+' -l 0x8 ca/EM2K0:XGMD:HPS:STR0:STREAM_SHORT2'}, # Ion waveforms
+]
+
+procmgr_ami = [
+#
+# ami
+#
+ { 'host': ami_manager_node, 'id':'ami-global',  'flags':'s', 'conda':conda_rel, 'cmd':f'ami-global --hutch {hutch} --prometheus-dir {prom_dir} -N 0 -n {ami_num_workers}'},
+ { 'host': ami_manager_node, 'id':'ami-manager', 'flags':'s', 'conda':conda_rel, 'cmd':f'ami-manager --hutch {hutch} --prometheus-dir {prom_dir} -n {ami_num_workers*ami_workers_per_node} -N {ami_num_workers}'},
+ {                           'id':'ami-client',  'flags':'s', 'conda':conda_rel, 'cmd':f'ami-client -H {ami_manager_node}'},
+]
+
+#
+# ami workers
+#
+for N, worker_node in enumerate(ami_worker_nodes):
+    procmgr_ami.append({ host: worker_node, id:f'meb{N}', flags:'spu', conda:conda_rel,
+                         #cmd:f'{task_set} monReqServer -P {hutch} -C {collect_host} -M {prom_dir} -k forceEnet=yes -d -q {ami_workers_per_node}'})
+                         cmd:f'{task_set} monReqServer -P {hutch} -C {collect_host} -M {prom_dir} -d -q {ami_workers_per_node}'})
+    for n in range(ami_workers_per_node):
+      procmgr_ami.append({ 'host': worker_node, 'id': f'ami-worker_{N}_{n}', 'flags':'s', 'conda':conda_rel,
+                           'cmd': f'ami-worker --hutch {hutch} --prometheus-dir {prom_dir} -N {N*ami_num_workers+n} -n {ami_num_workers} -b {heartbeat_period} -H {ami_manager_node} psana://shmem={hutch}'})
+
+    procmgr_ami.append({ 'host': worker_node, 'id': f'ami-node_{N}', 'flags':'s', 'conda':conda_rel,
+    	                 'cmd': f'ami-node --hutch {hutch} --prometheus-dir {prom_dir} -N {N} -n {ami_workers_per_node} -H {ami_manager_node} --log-level debug'})
+
+procmgr_config.extend(procmgr_ami)

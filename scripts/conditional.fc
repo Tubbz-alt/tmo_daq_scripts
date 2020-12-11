@@ -1,0 +1,732 @@
+{
+  "connects": [
+    [
+      "timing:raw:eventcodes",
+      "Out",
+      "Take.0",
+      "In"
+    ],
+    [
+      "timing:raw:eventcodes",
+      "Out",
+      "If.0",
+      "In"
+    ],
+    [
+      "timing:raw:eventcodes",
+      "Out",
+      "If.1",
+      "In"
+    ],
+    [
+      "Take.0",
+      "Out",
+      "ScatterPlot.0",
+      "Y"
+    ],
+    [
+      "Take.0",
+      "Out",
+      "ScatterPlot.1",
+      "Y"
+    ],
+    [
+      "Take.0",
+      "Out",
+      "ScatterPlot.2",
+      "Y"
+    ],
+    [
+      "timestamp",
+      "Out",
+      "ScatterPlot.0",
+      "X"
+    ],
+    [
+      "timestamp",
+      "Out",
+      "ScatterPlot.1",
+      "X"
+    ],
+    [
+      "timestamp",
+      "Out",
+      "ScatterPlot.2",
+      "X"
+    ],
+    [
+      "If.0",
+      "Out",
+      "ScatterPlot.1",
+      "Condition"
+    ],
+    [
+      "If.1",
+      "Out",
+      "ScatterPlot.2",
+      "Condition"
+    ]
+  ],
+  "library": {
+    "paths": []
+  },
+  "nodes": [
+    {
+      "class": "SourceNode",
+      "name": "timing:raw:eventcodes",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb00030000000007840000003000000aa70000036b000007860000004800000aa50000036700000001000000000780000007860000004800000aa500000367",
+        "pos": [
+          0.0,
+          400.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Take",
+      "name": "Take.0",
+      "state": {
+        "ctrl": {
+          "axis": 0,
+          "index": 13,
+          "mode": "raise"
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb00030000000007840000003000000aa70000036b000007860000004800000aa50000036700000001000000000780000007860000004800000aa500000367",
+        "pos": [
+          200.0,
+          400.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[amitypes.array.Array3d, amitypes.array.Array2d, amitypes.array.Array1d, typing.List[float]]"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "float"
+          }
+        },
+        "viewed": false
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "timestamp",
+      "state": {
+        "enabled": true,
+        "pos": [
+          200.0,
+          200.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "float"
+          }
+        },
+        "viewed": false
+      }
+    },
+    {
+      "class": "If",
+      "name": "If.0",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb000300000000001200000013000003350000034e000000140000002b000003330000034a00000000000000000780000000140000002b000003330000034a",
+        "pos": [
+          400.0,
+          500.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "bool"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "operation": "timing:raw:eventcodes[13]>0"
+        }
+      }
+    },
+    {
+      "class": "If",
+      "name": "If.1",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb000300000000001200000013000003350000034e000000140000002b000003330000034a00000000000000000780000000140000002b000003330000034a",
+        "pos": [
+          400.0,
+          700.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "bool"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "operation": "timing:raw:eventcodes[13]==0"
+        }
+      }
+    },
+    {
+      "class": "ScatterPlot",
+      "name": "ScatterPlot.0",
+      "state": {
+        "ctrl": {
+          "Num Points": 100
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb00030000000002a200000000000005c5000000a1000002a400000018000005c30000009d00000000000000000780000002a400000018000005c30000009d",
+        "pos": [
+          700.0,
+          400.0
+        ],
+        "terminals": {
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "Take.0.Out vs timestamp"
+          },
+          "legend": {
+            "trace.0": [
+              "Take.0.Out vs timestamp",
+              "Take.0.Out vs timestamp",
+              {
+                "Line": {
+                  "color": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ],
+                  "style": "None",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 5,
+                  "symbol": "o"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              1.0,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                972787017.2587638,
+                972787019.0823187
+              ],
+              [
+                -0.34024332246735645,
+                2.0611230073060716
+              ]
+            ],
+            "viewRange": [
+              [
+                972787017.2587638,
+                972787019.0823187
+              ],
+              [
+                -0.34024332246735645,
+                2.0611230073060716
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "ScatterPlot",
+      "name": "ScatterPlot.1",
+      "state": {
+        "ctrl": {
+          "Num Points": 100
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb00030000000002a2000000a7000005c500000141000002a4000000bf000005c30000013d00000000000000000780000002a4000000bf000005c30000013d",
+        "pos": [
+          800.0,
+          200.0
+        ],
+        "terminals": {
+          "Condition": {
+            "group": null,
+            "io": "condition",
+            "removable": true,
+            "ttype": "bool"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "Take.0.Out vs timestamp"
+          },
+          "legend": {
+            "trace.0": [
+              "Take.0.Out vs timestamp",
+              "Take.0.Out vs timestamp",
+              {
+                "Line": {
+                  "color": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ],
+                  "style": "None",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 5,
+                  "symbol": "o"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                972786771.2187221,
+                972786774.1318829
+              ],
+              [
+                -0.16174219956531832,
+                1.9441911109751855
+              ]
+            ],
+            "viewRange": [
+              [
+                972786771.2187221,
+                972786774.1318829
+              ],
+              [
+                -0.16174219956531832,
+                1.9441911109751855
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "ScatterPlot",
+      "name": "ScatterPlot.2",
+      "state": {
+        "ctrl": {
+          "Num Points": 100
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb00030000000002a000000142000005c5000001ec000002a20000015a000005c3000001e800000000000000000780000002a20000015a000005c3000001e8",
+        "pos": [
+          800.0,
+          600.0
+        ],
+        "terminals": {
+          "Condition": {
+            "group": null,
+            "io": "condition",
+            "removable": true,
+            "ttype": "bool"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "Take.0.Out vs timestamp"
+          },
+          "legend": {
+            "trace.0": [
+              "Take.0.Out vs timestamp",
+              "Take.0.Out vs timestamp",
+              {
+                "Line": {
+                  "color": [
+                    128,
+                    128,
+                    128,
+                    255
+                  ],
+                  "style": "None",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 5,
+                  "symbol": "o"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                972787074.3817497,
+                972787077.1255734
+              ],
+              [
+                -0.29072707114089325,
+                1.8152062393996111
+              ]
+            ],
+            "viewRange": [
+              [
+                972787074.3817497,
+                972787077.1255734
+              ],
+              [
+                -0.29072707114089325,
+                1.8152062393996111
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    }
+  ],
+  "source_configuration": {
+    "files": [],
+    "hb_period": 10,
+    "init_time": 0.5,
+    "interval": 0.01,
+    "repeat": true,
+    "type": "hdf5"
+  },
+  "viewbox": {
+    "comments": []
+  }
+}

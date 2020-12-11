@@ -1,0 +1,5 @@
+# Channel 0
+*evr_ch0_ec
+TMO:MISC:EVR:01:TRIG0:TEC ca
+*evr_ch0_delay
+TMO:MISC:EVR:01:TRIG0:TDES ca

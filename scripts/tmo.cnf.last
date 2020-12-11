@@ -1,0 +1,114 @@
+if not platform: platform = '0'
+
+import os
+ld_lib_path = 'LD_LIBRARY_PATH=%s/epics/lib/linux-x86_64:%s/pcas/lib/linux-x86_64'%((os.getenv('CONDA_PREFIX'),)*2)
+epics_env = 'EPICS_PVA_ADDR_LIST=172.21.156.255'+' '+ld_lib_path
+
+conda_rel = os.environ['CONDA_DEFAULT_ENV']
+
+#collect_host = os.uname()[1]
+collect_host = 'drp-neh-cmp001'
+
+groups = '0 1'
+hutch, user, password = ('tmo', 'tmoopr', 'pcds')
+##hutch, user, password = ('tst', 'tstopr', 'pcds')
+auth = ' --user {:} --password {:} '.format(user,password)
+#url  = ' --url https://pswww.slac.stanford.edu/ws-auth/devlgbk/ '
+url  = ' --url https://pswww.slac.stanford.edu/ws-auth/lgbk/ '
+cdb  = 'https://pswww.slac.stanford.edu/ws-auth/configdb/ws'
+#cdb  = 'https://pswww.slac.stanford.edu/ws-auth/devconfigdb/ws'
+
+#
+#  drp variables
+#
+prom_dir = '/reg/g/psdm/psdatmgr/etc/config/prom' # Prometheus
+data_dir = '/ffb01/data'
+
+task_set = 'taskset 0xffbfeffbfe '
+std_opts = '-P '+hutch+' -C '+collect_host+' -M '+prom_dir+' -o '+data_dir+' -d /dev/datadev_%d'
+
+drp_cmd0 = task_set+'drp '      +(std_opts%0)+' -l 0x1'
+drp_cmd1 = task_set+'drp '      +(std_opts%1)+' -l 0x1'
+pva_cmd0 = task_set+'drp_pva '  +(std_opts%1)+' -k batching=no '
+pva_cmd1 = task_set+'drp_pva '  +(std_opts%1)+' -k batching=no '
+
+ea_cfg = '/reg/g/pcds/dist/pds/tmo/misc/epicsArch.txt'
+ea_cmd   = task_set+'epicsArch '+(std_opts%0)+' -k batching=no '+ea_cfg
+
+#
+#  ami variables
+#
+heartbeat_period = 1000 # units are ms
+
+ami_workers_per_node = 4
+ami_worker_nodes = ["drp-neh-cmp007"]
+ami_num_workers = len(ami_worker_nodes)
+ami_manager_node = "drp-neh-cmp001"
+
+# procmgr FLAGS: <port number> static port number to keep executable
+#                              running across multiple start/stop commands.
+#                "X" open xterm
+#                "s" send signal to child when stopping
+#
+# HOST       UNIQUEID      FLAGS  COMMAND+ARGS
+# list of processes to run
+#   required fields: id, cmd
+#   optional fields: host, port, flags, conda, env, rtprio
+#     flags:
+#        'x' or 'X'  -> xterm: open small or large xterm for process console
+#        's'         -> stop: sends ctrl-c to process
+#        'u'         -> uniqueid: use 'id' as detector alias (supported by acq, cam, camedt, evr, and simcam)
+
+procmgr_config = [
+# { id:'xpmpva' , flags:'s', conda:conda_rel, env:epics_env, cmd:'xpmpva DAQ:NEH:XPM:0 DAQ:NEH:XPM:1'},
+ { id:'groupca', flags:'s', conda:conda_rel, env:epics_env, cmd:'groupca DAQ:NEH 0 '+groups+' --prod'},
+ { id:'procstat', flags:'p', conda:conda_rel, cmd:'procstat p'+platform+'.cnf.last'},
+
+ { host: 'drp-neh-cmp011', id:'teb1', flags:'spu', conda:conda_rel, cmd:'teb -C '+collect_host+' -P '+hutch},
+
+
+ { host: collect_host, id:'control', flags:'spu', conda:conda_rel, env:epics_env, cmd:f'control -P {hutch} -B DAQ:NEH -x 0 -C BEAM {auth} {url} -d {cdb}/configDB -r /dev/null -t trigger -S 5'},
+ { flags:'p', id:'control_gui', conda:conda_rel, cmd:f'control_gui -H {collect_host} --uris {cdb} --expert {auth}'},
+
+#
+#  Cant launch segm level from localhost until user is tmoopr (no permission to write)
+#
+ { host: 'drp-neh-cmp002', id:'timing_0', flags:'spu', conda:conda_rel, cmd:drp_cmd0+' -D ts -l 0x1'},
+
+ { host: 'drp-neh-cmp002', id:'gmd_0', flags:'spu', conda:conda_rel, env:epics_env, cmd: f'drp_bld -l 0x2 -P {hutch} -d /dev/datadev_0 -k interface=eno1 -D gmd -C {collect_host} -o {data_dir}'},
+ { host: 'drp-neh-cmp002', id:'xgmd_0', flags:'spu', conda:conda_rel, env:epics_env, cmd: f'drp_bld -l 0x4 -P {hutch} -d /dev/datadev_0 -k interface=eno1 -D xgmd -C {collect_host} -o {data_dir}'},
+
+ { host: 'drp-neh-cmp002', id:'epicsarch_0', flags:'spu', conda:conda_rel, env:epics_env, cmd:ea_cmd+' -l 0x8'},
+
+# { host: 'drp-neh-cmp002', id:'gmdstr1_0',    flags:'spu',  conda:conda_rel, env:epics_env, cmd:pva_cmd1+' -l 0x8 -k provider=ca -D gmdstr1 EM1K0:GMD:HPS:STR0:STREAM_SHORT1 -vvv'},
+# { host: 'drp-neh-cmp002', id:'gmdstr2_0',    flags:'spu',  conda:conda_rel, env:epics_env, cmd:pva_cmd1+' -l 0x10 -k provider=ca -D gmdstr2 EM1K0:GMD:HPS:STR0:STREAM_SHORT2 -vvv'},
+# { host: 'drp-neh-cmp002', id:'xgmdstr0_0',    flags:'spu',  conda:conda_rel, env:epics_env, cmd:pva_cmd1+' -l 0x20 -k provider=ca -D xgmdstr0 EM2K0:XGMD:HPS:STR0:STREAM_SHORT0 -vvv'},
+# { host: 'drp-neh-cmp002', id:'xgmdstr1_0',    flags:'spu',  conda:conda_rel, env:epics_env, cmd:pva_cmd1+' -l 0x40 -k provider=ca -D xgmdstr1 EM2K0:XGMD:HPS:STR0:STREAM_SHORT1'},
+# { host: 'drp-neh-cmp002', id:'xgmdstr2_0',    flags:'spu',  conda:conda_rel, env:epics_env, cmd:pva_cmd1+' -l 0x80 -k provider=ca -D xgmdstr2 EM2K0:XGMD:HPS:STR0:STREAM_SHORT2'},
+
+# { host: 'drp-neh-cmp011', id:'tmoopal_0',     flags:'spu',  conda:conda_rel, env:epics_env, cmd:drp_cmd0+' -D opal'},
+]
+
+procmgr_ami = [
+#
+# ami
+#
+ { 'host': ami_manager_node, 'id':'ami-global',  'flags':'s', 'conda':conda_rel, 'cmd':f'ami-global -N 0 -n {ami_num_workers}'},
+ { 'host': ami_manager_node, 'id':'ami-manager', 'flags':'s', 'conda':conda_rel, 'cmd':'ami-manager'},
+ {                           'id':'ami-client',  'flags':'s', 'conda':conda_rel, 'cmd':f'ami-client -H {ami_manager_node}'},
+]
+#
+# ami workers
+#
+
+for N, worker_node in enumerate(ami_worker_nodes):
+    procmgr_ami.append({ host: worker_node, id:f'meb{N}', flags:'spu', conda:conda_rel, 
+                         cmd:f'monReqServer -P {hutch} -d -q {ami_workers_per_node} -C {collect_host}'})
+    for n in range(ami_workers_per_node):
+      procmgr_ami.append({ 'host': worker_node, 'id': f'ami-worker_{N}_{n}', 'flags':'s', 'conda':conda_rel,
+      		           'cmd': f'ami-worker -N {n} -n {ami_num_workers} -b {heartbeat_period} -H {ami_manager_node} psana:////reg/g/pcds/dist/pds/tmo/misc/worker.json'})
+
+    procmgr_ami.append({ 'host': worker_node, 'id': f'ami-node_{N}', 'flags':'s', 'conda':conda_rel,
+    	                 'cmd': f'ami-node -N {N} -n {ami_workers_per_node} -H {ami_manager_node} --log-level debug'})
+
+procmgr_config.extend(procmgr_ami)

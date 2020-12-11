@@ -1,0 +1,234 @@
+{
+  "connects": [
+    [
+      "timestamp",
+      "Out",
+      "PythonEditor.0",
+      "In"
+    ],
+    [
+      "PythonEditor.0",
+      "Out",
+      "ScatterPlot.0",
+      "X"
+    ],
+    [
+      "PythonEditor.0",
+      "Out.1",
+      "ScatterPlot.0",
+      "Y"
+    ]
+  ],
+  "library": {
+    "paths": []
+  },
+  "nodes": [
+    {
+      "class": "SourceNode",
+      "name": "timestamp",
+      "state": {
+        "enabled": true,
+        "pos": [
+          500.0,
+          400.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "int"
+          }
+        },
+        "viewed": false
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.0",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb000300000000007b000001120000039a000004330000007b000001120000039a00000433000000000000000005ff0000007b000001120000039a00000433",
+        "pos": [
+          800.0,
+          400.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out.1": {
+            "group": null,
+            "io": "out",
+            "removable": true,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "import numpy as np\n\n# entry point must be called func\ndef func(timestamp, *args, **kwargs):\n    x = np.random.random()*timestamp\n    # return 1 output(s)\n    return x, x/2"
+        }
+      }
+    },
+    {
+      "class": "ScatterPlot",
+      "name": "ScatterPlot.0",
+      "state": {
+        "ctrl": {
+          "Num Points": 100
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb000300000000011300000044000004320000027400000113000000440000043200000274000000000000000005ff00000113000000440000043200000274",
+        "pos": [
+          1000.0,
+          400.0
+        ],
+        "terminals": {
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "float"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "PythonEditor.0.Out.1 vs PythonEditor.0.Out"
+          },
+          "legend": {
+            "trace.0": [
+              "PythonEditor.0.Out.1 vs PythonEditor.0.Out",
+              "PythonEditor.0.Out.1 vs PythonEditor.0.Out",
+              {
+                "Line": {
+                  "color": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "style": "None",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14,
+                  "symbol": "o"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -1866.9638856198621,
+                59079.612568972785
+              ],
+              [
+                -955.0584605118485,
+                29561.38280218831
+              ]
+            ],
+            "viewRange": [
+              [
+                -1866.9638856198621,
+                59079.612568972785
+              ],
+              [
+                -955.0584605118485,
+                29561.38280218831
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    }
+  ],
+  "source_configuration": {
+    "files": [],
+    "hb_period": 10,
+    "init_time": 0.5,
+    "interval": 0.01,
+    "repeat": true,
+    "type": "hdf5"
+  },
+  "viewbox": {
+    "comments": []
+  }
+}

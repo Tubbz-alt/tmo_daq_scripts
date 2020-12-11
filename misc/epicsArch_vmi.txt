@@ -1,0 +1,83 @@
+# epicsArch_vmi.txt
+#
+# Comments begin with # and not #*
+# PV descriptions begin with either * or #*
+# PV names do not begin with # nor *
+# PV names are followed by provider (ca or pva) on the same line
+# PV descriptions must immediately precede a PV name line
+#
+
+# Module 0
+*m0c0_vset
+TMO:PRO2:MPOD:01:M0:C0:VoltageMeasure ca
+*m0c1_vset
+TMO:PRO2:MPOD:01:M0:C1:VoltageMeasure ca
+*m0c2_vset
+TMO:PRO2:MPOD:01:M0:C2:VoltageMeasure ca
+*m0c3_vset
+TMO:PRO2:MPOD:01:M0:C3:VoltageMeasure ca
+*m0c4_vset
+TMO:PRO2:MPOD:01:M0:C4:VoltageMeasure ca
+*m0c5_vset
+TMO:PRO2:MPOD:01:M0:C5:VoltageMeasure ca
+*m0c6_vset
+TMO:PRO2:MPOD:01:M0:C6:VoltageMeasure ca
+*m0c7_vset
+TMO:PRO2:MPOD:01:M0:C7:VoltageMeasure ca
+
+# Module 2
+*m2c0_vset
+TMO:PRO2:MPOD:01:M2:C0:VoltageMeasure ca
+*m2c1_vset
+TMO:PRO2:MPOD:01:M2:C1:VoltageMeasure ca
+*m2c2_vset
+TMO:PRO2:MPOD:01:M2:C2:VoltageMeasure ca
+*m2c3_vset
+TMO:PRO2:MPOD:01:M2:C3:VoltageMeasure ca
+*m2c4_vset
+TMO:PRO2:MPOD:01:M2:C4:VoltageMeasure ca
+*m2c5_vset
+TMO:PRO2:MPOD:01:M2:C5:VoltageMeasure ca
+*m2c6_vset
+TMO:PRO2:MPOD:01:M2:C6:VoltageMeasure ca
+*m2c7_vset
+TMO:PRO2:MPOD:01:M2:C7:VoltageMeasure ca
+
+# Module 3
+*m3c0_vset
+TMO:PRO2:MPOD:01:M3:C0:VoltageMeasure ca
+*m3c1_vset
+TMO:PRO2:MPOD:01:M3:C1:VoltageMeasure ca
+*m3c2_vset
+TMO:PRO2:MPOD:01:M3:C2:VoltageMeasure ca
+*m3c3_vset
+TMO:PRO2:MPOD:01:M3:C3:VoltageMeasure ca
+
+# Module 4
+*m4c0_vset
+TMO:PRO2:MPOD:01:M4:C0:VoltageMeasure ca
+*m4c1_vset
+TMO:PRO2:MPOD:01:M4:C1:VoltageMeasure ca
+*m4c2_vset
+TMO:PRO2:MPOD:01:M4:C2:VoltageMeasure ca
+
+# Module 5
+*m5c0_vset
+TMO:PRO2:MPOD:01:M5:C0:VoltageMeasure ca
+
+# Module 6
+*m6c0_vset
+TMO:PRO2:MPOD:01:M6:C0:VoltageMeasure ca
+*m6c1_vset
+TMO:PRO2:MPOD:01:M6:C1:VoltageMeasure ca
+*m6c2_vset
+TMO:PRO2:MPOD:01:M6:C2:VoltageMeasure ca
+*m6c3_vset
+TMO:PRO2:MPOD:01:M6:C3:VoltageMeasure ca
+
+# Module 7
+*m7c0_vset
+TMO:PRO2:MPOD:01:M7:C0:VoltageMeasure ca
+*m7c1_vset
+TMO:PRO2:MPOD:01:M7:C1:VoltageMeasure ca
+

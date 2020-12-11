@@ -1,0 +1,8 @@
+
+ioc_node = 'daq-tmo-hsd-01'
+hsd_epics = 'DAQ:TMO:HSD:1'
+hsd_ids = ['1b','1a','3e','3d','5e','da','b2']
+
+for hsd in hsd_ids:
+    procmgr_hsd.append({host:ioc_node, id:'hsdioc_{:}'.format(hsd), flags:'s', conda:conda_rel, env:hsd_epics_env, cmd:'hsd134PVs -P {:}_{:} -d /dev/pcie_adc_{:}'.format(hsd_epics,hsd.upper(),hsd)})
+
