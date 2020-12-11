@@ -1,0 +1,10 @@
+*las_fs14_controller_time
+LAS:FS14:VIT:FS_CTR_TIME ca
+*las_fs14_phase_shifter
+LAS:FS14:MMS:PH ca
+*las_fs14_target_time
+LAS:FS14:VIT:FS_TGT_TIME ca
+*las_fs14_target_time_dial
+LAS:FS14:VIT:FS_TGT_TIME_DIAL ca
+*las_fs14_target_time_offset
+LAS_FS14:VIT:FS_TGT_TIME_OFFSET ca

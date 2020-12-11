@@ -1,0 +1,3657 @@
+{
+  "connects": [
+    [
+      "hsd:raw:waveforms:0:times",
+      "Out",
+      "PythonEditor.0",
+      "In"
+    ],
+    [
+      "hsd:raw:waveforms:0:0",
+      "Out",
+      "Stack.0",
+      "In"
+    ],
+    [
+      "hsd:raw:waveforms:0:0",
+      "Out",
+      "WaveformViewer.0",
+      "In"
+    ],
+    [
+      "hsd:raw:waveforms:2:0",
+      "Out",
+      "Stack.0",
+      "In.1"
+    ],
+    [
+      "hsd:raw:waveforms:2:0",
+      "Out",
+      "WaveformViewer.1",
+      "In"
+    ],
+    [
+      "hsd:raw:waveforms:4:0",
+      "Out",
+      "Stack.0",
+      "In.2"
+    ],
+    [
+      "hsd:raw:waveforms:4:0",
+      "Out",
+      "WaveformViewer.2",
+      "In"
+    ],
+    [
+      "hsd:raw:waveforms:5:0",
+      "Out",
+      "Stack.0",
+      "In.3"
+    ],
+    [
+      "hsd:raw:waveforms:5:0",
+      "Out",
+      "WaveformViewer.3",
+      "In"
+    ],
+    [
+      "hsd:raw:waveforms:8:0",
+      "Out",
+      "Stack.0",
+      "In.4"
+    ],
+    [
+      "hsd:raw:waveforms:8:0",
+      "Out",
+      "WaveformViewer.4",
+      "In"
+    ],
+    [
+      "tmoopal:raw:image",
+      "Out",
+      "PythonEditor.4",
+      "In"
+    ],
+    [
+      "tmoopal:raw:image",
+      "Out",
+      "ImageViewer.2",
+      "In"
+    ],
+    [
+      "Stack.0",
+      "Out",
+      "PythonEditor.0",
+      "In.1"
+    ],
+    [
+      "PythonEditor.4",
+      "Out",
+      "PythonEditor.5",
+      "In"
+    ],
+    [
+      "PythonEditor.4",
+      "Out",
+      "PythonEditor.6",
+      "In"
+    ],
+    [
+      "PythonEditor.5",
+      "Out",
+      "Binning2D.3",
+      "X"
+    ],
+    [
+      "PythonEditor.6",
+      "Out",
+      "Binning2D.3",
+      "Y"
+    ],
+    [
+      "PythonEditor.0",
+      "Out",
+      "PythonEditor.1",
+      "In"
+    ],
+    [
+      "PythonEditor.0",
+      "Out",
+      "PythonEditor.2",
+      "In"
+    ],
+    [
+      "PythonEditor.0",
+      "Out",
+      "PythonEditor.3",
+      "In"
+    ],
+    [
+      "PythonEditor.1",
+      "Out",
+      "Binning2D.0",
+      "X"
+    ],
+    [
+      "PythonEditor.1",
+      "Out",
+      "Binning2D.1",
+      "Y"
+    ],
+    [
+      "PythonEditor.2",
+      "Out",
+      "Binning2D.0",
+      "Y"
+    ],
+    [
+      "PythonEditor.2",
+      "Out",
+      "Binning2D.2",
+      "Y"
+    ],
+    [
+      "PythonEditor.3",
+      "Out",
+      "Binning.0",
+      "In"
+    ],
+    [
+      "PythonEditor.3",
+      "Out",
+      "Binning2D.1",
+      "X"
+    ],
+    [
+      "PythonEditor.3",
+      "Out",
+      "Binning2D.2",
+      "X"
+    ],
+    [
+      "Binning2D.3",
+      "Counts",
+      "PythonEditor.7",
+      "In"
+    ],
+    [
+      "Binning2D.3",
+      "Counts",
+      "ImageViewer.1",
+      "In"
+    ],
+    [
+      "Binning2D.0",
+      "XBins",
+      "Histogram2D.0",
+      "XBins"
+    ],
+    [
+      "Binning2D.0",
+      "YBins",
+      "Histogram2D.0",
+      "YBins"
+    ],
+    [
+      "Binning2D.0",
+      "Counts",
+      "Histogram2D.0",
+      "Counts"
+    ],
+    [
+      "Binning2D.1",
+      "XBins",
+      "Histogram2D.1",
+      "XBins"
+    ],
+    [
+      "Binning2D.1",
+      "YBins",
+      "Histogram2D.1",
+      "YBins"
+    ],
+    [
+      "Binning2D.1",
+      "Counts",
+      "Histogram2D.1",
+      "Counts"
+    ],
+    [
+      "Binning2D.2",
+      "XBins",
+      "Histogram2D.2",
+      "XBins"
+    ],
+    [
+      "Binning2D.2",
+      "YBins",
+      "Histogram2D.2",
+      "YBins"
+    ],
+    [
+      "Binning2D.2",
+      "Counts",
+      "Histogram2D.2",
+      "Counts"
+    ],
+    [
+      "Binning.0",
+      "Bins",
+      "Histogram.0",
+      "Bins"
+    ],
+    [
+      "Binning.0",
+      "Counts",
+      "Histogram.0",
+      "Counts"
+    ],
+    [
+      "PythonEditor.7",
+      "Out",
+      "PythonEditor.8",
+      "In"
+    ],
+    [
+      "PythonEditor.7",
+      "Out",
+      "PythonEditor.9",
+      "In"
+    ],
+    [
+      "PythonEditor.7",
+      "Out",
+      "PythonEditor.10",
+      "In"
+    ],
+    [
+      "PythonEditor.8",
+      "Out",
+      "ImageViewer.0",
+      "In"
+    ],
+    [
+      "PythonEditor.9",
+      "Out",
+      "LinePlot.0",
+      "X"
+    ],
+    [
+      "PythonEditor.10",
+      "Out",
+      "LinePlot.0",
+      "Y"
+    ]
+  ],
+  "library": {
+    "paths": []
+  },
+  "nodes": [
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.0",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb00030000fffffffe000000710000031d00000392fffffffe000000710000031d00000392000000000000000005fffffffffe000000710000031d00000392",
+        "pos": [
+          100.0,
+          400.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "Ion MCP",
+            "X Axis": {
+              "Label": "Index",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Voltage (mV)",
+              "Log Scale": false
+            },
+            "trace.0": "hsd:raw:waveforms:0:0"
+          },
+          "legend": {
+            "trace.0": [
+              "hsd:raw:waveforms:0:0",
+              "hsd:raw:waveforms:0:0",
+              {
+                "Line": {
+                  "color": [
+                    255,
+                    255,
+                    127,
+                    255
+                  ],
+                  "style": "Solid",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    255,
+                    255,
+                    255,
+                    255
+                  ],
+                  "Size": 14,
+                  "symbol": "None"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -1739.854816758655,
+                61138.854816758656
+              ],
+              [
+                1994.3623033721321,
+                2141.7381126550335
+              ]
+            ],
+            "viewRange": [
+              [
+                -1739.854816758655,
+                61138.854816758656
+              ],
+              [
+                1994.3623033721321,
+                2141.7381126550335
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.1",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          100.0,
+          500.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "Ion X1",
+            "X Axis": {
+              "Label": "Index",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Voltage (mV)",
+              "Log Scale": false
+            },
+            "trace.0": "hsd:raw:waveforms:2:0"
+          },
+          "legend": {
+            "trace.0": [
+              "hsd:raw:waveforms:2:0",
+              "hsd:raw:waveforms:2:0",
+              {
+                "Line": {
+                  "color": [
+                    255,
+                    0,
+                    0,
+                    255
+                  ],
+                  "style": "Solid",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14,
+                  "symbol": "None"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -3523.1064521488006,
+                82778.51687762428
+              ],
+              [
+                1882.1567486796107,
+                2123.7749756225317
+              ]
+            ],
+            "viewRange": [
+              [
+                -3523.1064521488006,
+                82778.51687762428
+              ],
+              [
+                1882.1567486796107,
+                2123.7749756225317
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.2",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          100.0,
+          600.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "Ion X2",
+            "X Axis": {
+              "Label": "Index",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Voltage (mV)",
+              "Log Scale": false
+            },
+            "trace.0": "hsd:raw:waveforms:4:0"
+          },
+          "legend": {
+            "trace.0": [
+              "hsd:raw:waveforms:4:0",
+              "hsd:raw:waveforms:4:0",
+              {
+                "Line": {
+                  "color": [
+                    85,
+                    170,
+                    0,
+                    255
+                  ],
+                  "style": "Solid",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14,
+                  "symbol": "None"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -2362.1886779711076,
+                61761.188677971106
+              ],
+              [
+                1877.2962782608697,
+                2226.7037217391303
+              ]
+            ],
+            "viewRange": [
+              [
+                -2362.1886779711076,
+                61761.188677971106
+              ],
+              [
+                1877.2962782608697,
+                2226.7037217391303
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.3",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          100.0,
+          700.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "Ion Y1",
+            "X Axis": {
+              "Label": "Index",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Voltage (mV)",
+              "Log Scale": false
+            },
+            "trace.0": "hsd:raw:waveforms:5:0"
+          },
+          "legend": {
+            "trace.0": [
+              "hsd:raw:waveforms:5:0",
+              "hsd:raw:waveforms:5:0",
+              {
+                "Line": {
+                  "color": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "style": "Solid",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14,
+                  "symbol": "None"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -2391.797397123784,
+                61790.79739712378
+              ],
+              [
+                1847.3281092466425,
+                2219.611792981477
+              ]
+            ],
+            "viewRange": [
+              [
+                -2391.797397123784,
+                61790.79739712378
+              ],
+              [
+                1847.3281092466425,
+                2219.611792981477
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "WaveformViewer",
+      "name": "WaveformViewer.4",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          100.0,
+          800.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "Ion Y2",
+            "X Axis": {
+              "Label": "Index",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Voltage (mV)",
+              "Log Scale": false
+            },
+            "trace.0": "hsd:raw:waveforms:8:0"
+          },
+          "legend": {
+            "trace.0": [
+              "hsd:raw:waveforms:8:0",
+              "hsd:raw:waveforms:8:0",
+              {
+                "Line": {
+                  "color": [
+                    0,
+                    170,
+                    255,
+                    255
+                  ],
+                  "style": "Solid",
+                  "width": 1
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14,
+                  "symbol": "None"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -2389.9144471236345,
+                61788.91444712363
+              ],
+              [
+                1854.0277704022026,
+                2192.8280753201075
+              ]
+            ],
+            "viewRange": [
+              [
+                -2389.9144471236345,
+                61788.91444712363
+              ],
+              [
+                1854.0277704022026,
+                2192.8280753201075
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "ImageViewer",
+      "name": "ImageViewer.2",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          100.0,
+          -200.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Display": {
+              "Flip": false,
+              "Rotate Counter Clockwise": "0"
+            },
+            "Histogram": {
+              "Auto Levels": false,
+              "Auto Range": false,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "Single-Shot Electron VMI Image",
+            "X Axis": {
+              "Label": "Pixle",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Pixle",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.2,
+                  [
+                    7,
+                    0,
+                    220,
+                    255
+                  ]
+                ],
+                [
+                  0.5,
+                  [
+                    236,
+                    0,
+                    134,
+                    255
+                  ]
+                ],
+                [
+                  0.8,
+                  [
+                    246,
+                    246,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ],
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              27.128761467904763,
+              49.51679050820526
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -554.2983433816803,
+                554.2983433816803
+              ],
+              [
+                -254.34438171199622,
+                1227.5462688594548
+              ]
+            ],
+            "viewRange": [
+              [
+                -554.2983433816803,
+                554.2983433816803
+              ],
+              [
+                -254.34438171199622,
+                1227.5462688594548
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "hsd:raw:waveforms:0:times",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          200.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "hsd:raw:waveforms:0:0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          400.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "hsd:raw:waveforms:2:0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          500.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "hsd:raw:waveforms:4:0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          600.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "hsd:raw:waveforms:5:0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          700.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "hsd:raw:waveforms:8:0",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          800.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "tmoopal:raw:image",
+      "state": {
+        "enabled": true,
+        "pos": [
+          400.0,
+          -200.0
+        ],
+        "terminals": {
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "ctrl": {
+            "Display": {
+              "Flip": false,
+              "Rotate Counter Clockwise": "0"
+            },
+            "Histogram": {
+              "Auto Levels": true,
+              "Auto Range": true,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              0,
+              1.0
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "viewRange": [
+              [
+                -0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Stack",
+      "name": "Stack.0",
+      "state": {
+        "ctrl": {
+          "axis": 0
+        },
+        "enabled": true,
+        "pos": [
+          700.0,
+          600.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[amitypes.array.Array1d, typing.List[amitypes.array.Array1d]]"
+          },
+          "In.1": {
+            "group": null,
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Union[amitypes.array.Array1d, typing.List[amitypes.array.Array1d]]"
+          },
+          "In.2": {
+            "group": null,
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Union[amitypes.array.Array1d, typing.List[amitypes.array.Array1d]]"
+          },
+          "In.3": {
+            "group": null,
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Union[amitypes.array.Array1d, typing.List[amitypes.array.Array1d]]"
+          },
+          "In.4": {
+            "group": null,
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Union[amitypes.array.Array1d, typing.List[amitypes.array.Array1d]]"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        },
+        "viewed": false
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.4",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb00030000000000310000007d000003500000039e000000310000007d000003500000039e000000000000000005ff000000310000007d000003500000039e",
+        "pos": [
+          700.0,
+          -200.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "from psalg_ext import peak_finder_algos\nimport numpy as np\n\n# entry point must be called func\ndef func(tmoopal_raw_image, *args, **kwargs):\n    \n    mask = np.ones([1024,1024], dtype=np.uint16)\n    algos = peak_finder_algos(pbits=0)\n    pks = algos.peak_finder_v4r3_d2(tmoopal_raw_image, mask, thr_low=30, \n                                    thr_high=60, rank=2, r0=2, dr=1)\n    coords = np.array([[pk.col,pk.row] for pk in pks])    \n\n    # return 1 output(s)\n    return coords"
+        }
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.5",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          900.0,
+          -300.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "\n\n# entry point must be called func\ndef func(PythonEditor_4_Out, *args, **kwargs):\n\n    # return 1 output(s)\n    return PythonEditor_4_Out[:,0]"
+        }
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.6",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          900.0,
+          -100.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "\n\n# entry point must be called func\ndef func(PythonEditor_4_Out, *args, **kwargs):\n\n    # return 1 output(s)\n    return PythonEditor_4_Out[:,1]"
+        }
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.0",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000f4600000bec000013b000000f3000000f4600000c11000013b000000f3000000000000000000f0000000f4600000c11000013b000000f30",
+        "pos": [
+          1000.0,
+          400.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "In.1": {
+            "group": null,
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "from psana.hexanode.HitFinder import HitFinder\nfrom scipy.signal import find_peaks\nfrom scipy.ndimage import gaussian_filter1d\nimport numpy as np\n\n# entry point must be called func\ndef func(hsd_raw_waveforms_0_times, Stack_0_Out, *args, **kwargs):\n    ind1 = 1000\n    ind2 = 60000\n    ts = hsd_raw_waveforms_0_times[ind1:ind2]\n    heights = {}\n    channels = {'mcp':0,'x1':1,'x2':2,'y1':3,'y2':4}\n    for k in channels.keys():\n        if k =='mcp':\n            heights[k] = np.max(Stack_0_Out[channels[k]][-1000:])+2\n        else:\n            heights[k] = np.min(-Stack_0_Out[channels[k]][-1000:])+55            \n\n    hf_params = {'runtime_u' : 185,\n          'runtime_v' : 185,\n          'tsum_avg_u' : 189,\n          'tsum_avg_v' : 195.5,\n          'tsum_hw_u' : 10,\n          'tsum_hw_v' : 10,\n          'f_u' : 0.65,\n          'f_v' : 0.65,\n          'Rmax': 65\n         }    \n    HF = HitFinder(hf_params)\n    \n    t_pks = {}\n    for i,k in enumerate(channels.keys()):\n\n        if k=='mcp':\n            ind_t_pks,_ = find_peaks(gaussian_filter1d(Stack_0_Out[channels[k]][ind1:ind2],5),\n                               height=heights[k],prominence=5)\n        else:\n            ind_t_pks,_ = find_peaks(gaussian_filter1d(-Stack_0_Out[channels[k]][ind1:ind2],5),\n                                     height=heights[k],prominence=20)                        \n        t_pks[k] = ts[ind_t_pks]*1e9    \n\n    HF.FindHits(t_pks['mcp'],t_pks['x1'],t_pks['x2'],t_pks['y1'],t_pks['y2'])\n    xs1,ys1,ts1 = HF.GetXYT()\n\n    # return 3 output(s)\n    return [xs1,ys1,ts1]"
+        }
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.1",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          1200.0,
+          300.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "\n\n# entry point must be called func\ndef func(PythonEditor_0_Out, *args, **kwargs):\n\n    # return 1 output(s)\n    return PythonEditor_0_Out[0]"
+        }
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.2",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb00030000000000040000005b000003230000037e000000040000005b000003230000037e000000000000000005ff000000040000005b000003230000037e",
+        "pos": [
+          1200.0,
+          400.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "\n\n# entry point must be called func\ndef func(PythonEditor_0_Out, *args, **kwargs):\n\n    # return 1 output(s)\n    return PythonEditor_0_Out[1]"
+        }
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.3",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb00030000000000050000007c000003240000039d000000050000007c000003240000039d000000000000000005ff000000050000007c000003240000039d",
+        "pos": [
+          1200.0,
+          500.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "\n\n# entry point must be called func\ndef func(PythonEditor_0_Out, *args, **kwargs):\n\n    # return 1 output(s)\n    return PythonEditor_0_Out[2]"
+        }
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.3",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 1024.0,
+          "range x min": 0.0,
+          "range y max": 1024.0,
+          "range y min": 0.0,
+          "x bins": 512,
+          "y bins": 512
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          1200.0,
+          -200.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false
+      }
+    },
+    {
+      "class": "ImageViewer",
+      "name": "ImageViewer.1",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          1400.0,
+          -500.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Display": {
+              "Flip": false,
+              "Rotate Counter Clockwise": "0"
+            },
+            "Histogram": {
+              "Auto Levels": false,
+              "Auto Range": false,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "Integrated Raw electron VMI image",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.044135802469135794,
+                  [
+                    7,
+                    0,
+                    220,
+                    255
+                  ]
+                ],
+                [
+                  0.17427059379943585,
+                  [
+                    236,
+                    0,
+                    134,
+                    255
+                  ]
+                ],
+                [
+                  0.3713668313844448,
+                  [
+                    246,
+                    246,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ],
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  0.4812776228452142,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              0,
+              41582.0
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              1.0
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -275.91449194456095,
+                275.91449194456095
+              ],
+              [
+                -277.00761446047284,
+                277.00761446047284
+              ]
+            ],
+            "viewRange": [
+              [
+                -275.91449194456095,
+                275.91449194456095
+              ],
+              [
+                -277.00761446047284,
+                277.00761446047284
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.0",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 70.0,
+          "range x min": -70.0,
+          "range y max": 70.0,
+          "range y min": -70.0,
+          "x bins": 140,
+          "y bins": 140
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000f00000008930000121f00000bd700000f00000008b80000121f00000bd700000000000000000f0000000f00000008b80000121f00000bd7",
+        "pos": [
+          1500.0,
+          200.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.1",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 10000.0,
+          "range x min": 0.0,
+          "range y max": 70.0,
+          "range y min": -70.0,
+          "x bins": 1000,
+          "y bins": 140
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000f00000008930000121f00000bd700000f00000008b80000121f00000bd700000000000000000f0000000f00000008b80000121f00000bd7",
+        "pos": [
+          1500.0,
+          400.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false
+      }
+    },
+    {
+      "class": "Binning2D",
+      "name": "Binning2D.2",
+      "state": {
+        "ctrl": {
+          "density": false,
+          "range x max": 10000.0,
+          "range x min": 0.0,
+          "range y max": 70.0,
+          "range y min": -70.0,
+          "x bins": 1000,
+          "y bins": 140
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000f00000008930000121f00000bd700000f00000008b80000121f00000bd700000000000000000f0000000f00000008b80000121f00000bd7",
+        "pos": [
+          1500.0,
+          600.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "XBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          },
+          "YBins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": false
+      }
+    },
+    {
+      "class": "Binning",
+      "name": "Binning.0",
+      "state": {
+        "ctrl": {
+          "auto range": false,
+          "bins": 1000,
+          "density": false,
+          "range max": 10000.0,
+          "range min": 0.0,
+          "weighted": false
+        },
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000f00000008930000121f00000bd700000f00000008b80000121f00000bd700000000000000000f0000000f00000008b80000121f00000bd7",
+        "pos": [
+          1500.0,
+          800.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d]"
+          }
+        },
+        "viewed": false
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.7",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000f4600000db400001265000010f800000f4600000dd900001265000010f800000000000000000f0000000f4600000dd900001265000010f8",
+        "pos": [
+          1500.0,
+          -200.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "import numpy as np\n\nfrom psana.pop import POP\n\n# entry point must be called func\ndef func(Binning2D_0_Counts, *args, **kwargs):\n    \n    pop = POP.POP(lmax=4,reg=0,alpha=0.0013,img=Binning2D_0_Counts,\n                  X0=271,Y0=273,Rmax=238,\n          RBFs_fnm='/cds/home/x/xiangli/Share/RBFs512.pkl',edge_w=10) \n          \n    pop.Peel(Binning2D_0_Counts)\n    slice_img = pop.GetSlice()\n    rbins,DistR = pop.GetRadialDist()\n    Ebins,DistE = pop.GetEnergyDist()  \n\n    # return 1 output(s)\n    return [slice_img,rbins,DistR,Ebins,DistE]"
+        }
+      }
+    },
+    {
+      "class": "Histogram",
+      "name": "Histogram.0",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          1700.0,
+          800.0
+        ],
+        "terminals": {
+          "Bins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "Ion Time of Flight",
+            "X Axis": {
+              "Label": "Time of Flight (ns)",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Yield (arb.units)",
+              "Log Scale": false
+            },
+            "trace.0": "Binning.0.Counts"
+          },
+          "legend": {
+            "trace.0": [
+              "Binning.0.Counts",
+              "Binning.0.Counts",
+              {
+                "brush": [
+                  0,
+                  0,
+                  127,
+                  255
+                ]
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                851.6283775166647,
+                8048.752605643869
+              ],
+              [
+                -739.772822200679,
+                9131.618979950606
+              ]
+            ],
+            "viewRange": [
+              [
+                851.6283775166647,
+                8048.752605643869
+              ],
+              [
+                -739.772822200679,
+                9131.618979950606
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram2D",
+      "name": "Histogram2D.0",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          1700.0,
+          200.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "XBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "YBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Histogram": {
+              "Auto Levels": false,
+              "Auto Range": false,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "Ion Detector Image",
+            "X Axis": {
+              "Label": "X (mm)",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Y (mm)",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    68,
+                    1,
+                    84,
+                    255
+                  ]
+                ],
+                [
+                  0.25,
+                  [
+                    58,
+                    82,
+                    139,
+                    255
+                  ]
+                ],
+                [
+                  0.5,
+                  [
+                    32,
+                    144,
+                    140,
+                    255
+                  ]
+                ],
+                [
+                  0.75,
+                  [
+                    94,
+                    201,
+                    97,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    253,
+                    231,
+                    36,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              -1.3085545833479841,
+              13.80284935248254
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              1.0,
+              1.0
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -53.467883623984534,
+                53.467883623984534
+              ],
+              [
+                -54.16611124476924,
+                54.16611124476924
+              ]
+            ],
+            "viewRange": [
+              [
+                -53.467883623984534,
+                53.467883623984534
+              ],
+              [
+                -54.16611124476924,
+                54.16611124476924
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram2D",
+      "name": "Histogram2D.1",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          1700.0,
+          400.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "XBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "YBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Histogram": {
+              "Auto Levels": false,
+              "Auto Range": false,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "Ion X-T",
+            "X Axis": {
+              "Label": "Time of Flight (ns)",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "X (mm)",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.2,
+                  [
+                    7,
+                    0,
+                    220,
+                    255
+                  ]
+                ],
+                [
+                  0.5,
+                  [
+                    236,
+                    0,
+                    134,
+                    255
+                  ]
+                ],
+                [
+                  0.8,
+                  [
+                    246,
+                    246,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ],
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              -0.43722951881303374,
+              22.915009296758168
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                1571.6489665747035,
+                9291.282524896973
+              ],
+              [
+                -47.21545724029713,
+                32.76438224420795
+              ]
+            ],
+            "viewRange": [
+              [
+                1571.6489665747035,
+                9291.282524896973
+              ],
+              [
+                -47.21545724029713,
+                32.76438224420795
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "Histogram2D",
+      "name": "Histogram2D.2",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          1700.0,
+          600.0
+        ],
+        "terminals": {
+          "Counts": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          },
+          "XBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "YBins": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Histogram": {
+              "Auto Levels": false,
+              "Auto Range": false,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "Ion Y-T",
+            "X Axis": {
+              "Label": "Time of Flight (ns)",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Y (mm)",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.2,
+                  [
+                    7,
+                    0,
+                    220,
+                    255
+                  ]
+                ],
+                [
+                  0.5,
+                  [
+                    236,
+                    0,
+                    134,
+                    255
+                  ]
+                ],
+                [
+                  0.8,
+                  [
+                    246,
+                    246,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ],
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              -0.5444467369371244,
+              29.401685114165506
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              1.0,
+              1.0
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -5218.937718242307,
+                5218.937718242307
+              ],
+              [
+                -57.55693129495489,
+                57.55693129495489
+              ]
+            ],
+            "viewRange": [
+              [
+                -5218.937718242307,
+                5218.937718242307
+              ],
+              [
+                -57.55693129495489,
+                57.55693129495489
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.8",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb00030000000000290000006e000003480000038f000000290000006e000003480000038f000000000000000005ff000000290000006e000003480000038f",
+        "pos": [
+          1700.0,
+          -300.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "\n\n# entry point must be called func\ndef func(PythonEditor_7_Out, *args, **kwargs):\n\n    # return 1 output(s)\n    return PythonEditor_7_Out[0]"
+        }
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.9",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          1700.0,
+          -200.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "\n\n# entry point must be called func\ndef func(PythonEditor_7_Out, *args, **kwargs):\n\n    # return 1 output(s)\n    return (PythonEditor_7_Out[1][1:]+PythonEditor_7_Out[1][:-1])/2"
+        }
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.10",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          1700.0,
+          -100.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any"
+          },
+          "Out": {
+            "group": null,
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any"
+          }
+        },
+        "viewed": false,
+        "widget": {
+          "text": "\n\n# entry point must be called func\ndef func(PythonEditor_7_Out, *args, **kwargs):\n\n    # return 1 output(s)\n    return PythonEditor_7_Out[2]"
+        }
+      }
+    },
+    {
+      "class": "ImageViewer",
+      "name": "ImageViewer.0",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          2000.0,
+          -400.0
+        ],
+        "terminals": {
+          "In": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Display": {
+              "Flip": false,
+              "Rotate Counter Clockwise": "0"
+            },
+            "Histogram": {
+              "Auto Levels": false,
+              "Auto Range": false,
+              "Log Scale": false
+            },
+            "Show Grid": true,
+            "Title": "Inverted Electron VMI Image",
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.08338658146964857,
+                  [
+                    7,
+                    0,
+                    220,
+                    255
+                  ]
+                ],
+                [
+                  0.14217252396166133,
+                  [
+                    236,
+                    0,
+                    134,
+                    255
+                  ]
+                ],
+                [
+                  0.29361022364217265,
+                  [
+                    246,
+                    246,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  0.3402555910543131,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ],
+                [
+                  0.0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              0.14353318763337763,
+              0.5018407483155131
+            ],
+            "mode": "mono"
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -257.95495806795515,
+                257.95495806795515
+              ],
+              [
+                33.310625696865856,
+                548.4045800648773
+              ]
+            ],
+            "viewRange": [
+              [
+                -257.95495806795515,
+                257.95495806795515
+              ],
+              [
+                33.310625696865856,
+                548.4045800648773
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    },
+    {
+      "class": "LinePlot",
+      "name": "LinePlot.0",
+      "state": {
+        "enabled": true,
+        "geometry": "01d9d0cb0003000000000000000000000000031f0000031f00000000000000000000031f0000031f000000000000000005ff00000000000000000000031f0000031f",
+        "pos": [
+          2000.0,
+          -100.0
+        ],
+        "terminals": {
+          "X": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          },
+          "Y": {
+            "group": null,
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d"
+          }
+        },
+        "viewed": true,
+        "widget": {
+          "ctrl": {
+            "Show Grid": true,
+            "Title": "Inverted  Electron VMI Radial Distribution",
+            "X Axis": {
+              "Label": "R (arb. units)",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "Yield (arb. units)",
+              "Log Scale": false
+            },
+            "trace.0": "PythonEditor.10.Out vs PythonEditor.9.Out"
+          },
+          "legend": {
+            "trace.0": [
+              "PythonEditor.10.Out vs PythonEditor.9.Out",
+              "PythonEditor.10.Out vs PythonEditor.9.Out",
+              {
+                "Line": {
+                  "color": [
+                    255,
+                    255,
+                    127,
+                    255
+                  ],
+                  "style": "Solid",
+                  "width": 4
+                },
+                "Point": {
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14,
+                  "symbol": "None"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "aspectLocked": false,
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoRange": [
+              true,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "background": null,
+            "enableMenu": false,
+            "limits": {
+              "xLimits": [
+                null,
+                null
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yLimits": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            },
+            "linkedViews": [
+              null,
+              null
+            ],
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "targetRange": [
+              [
+                -9.559847195668954,
+                247.55984719566897
+              ],
+              [
+                -25857.173914504092,
+                81858.2583302414
+              ]
+            ],
+            "viewRange": [
+              [
+                -9.559847195668954,
+                247.55984719566897
+              ],
+              [
+                -25857.173914504092,
+                81858.2583302414
+              ]
+            ],
+            "wheelScaleFactor": -0.125,
+            "xInverted": false,
+            "yInverted": false
+          }
+        }
+      }
+    }
+  ],
+  "source_configuration": {
+    "files": [],
+    "hb_period": 10,
+    "init_time": 0.5,
+    "interval": 0.01,
+    "repeat": true,
+    "type": "hdf5"
+  },
+  "viewbox": {
+    "comments": []
+  }
+}

@@ -1,0 +1,256 @@
+# epicsArch.txt
+#
+# Comments begin with # and not #*
+# PV descriptions begin with either * or #*
+# PV names do not begin with # nor *
+# PV names are followed by provider (ca or pva) on the same line
+# PV descriptions must immediately precede a PV name line
+#
+
+# Undulator Phase Shifters and K values
+*UND_26_gap_act
+PHAS:UNDS:2670:GapAct ca
+*UND_26_gap_des
+PHAS:UNDS:2670:GapDes ca
+*UND_26_phase_integral
+PHAS:UNDS:2670:PIAct ca
+*UND_26_k
+USEG:UNDS:2650:KAct ca
+*UND_26_dphi
+PHAS:UNDS:2670:DPHI ca
+
+*UND_27_gap_act
+PHAS:UNDS:2770:GapAct ca
+*UND_27_gap_des
+PHAS:UNDS:2770:GapDes ca
+*UND_27_phase_integral
+PHAS:UNDS:2770:PIAct ca
+*UND_27_k
+USEG:UNDS:2750:KAct ca
+*UND_27_dphi
+PHAS:UNDS:2770:DPHI ca
+
+*UND_28_gap_act
+PHAS:UNDS:2870:GapAct ca
+*UND_28_gap_des
+PHAS:UNDS:2870:GapDes ca
+*UND_28_phase_integral
+PHAS:UNDS:2870:PIAct ca
+*UND_28_k
+USEG:UNDS:2850:KAct ca
+*UND_28_dphi
+PHAS:UNDS:2870:DPHI ca
+
+*UND_29_gap_act
+PHAS:UNDS:2970:GapAct ca
+*UND_29_gap_des
+PHAS:UNDS:2970:GapDes ca
+*UND_29_phase_integral
+PHAS:UNDS:2970:PIAct ca
+*UND_29_k
+USEG:UNDS:2950:KAct ca
+*UND_29_dphi
+PHAS:UNDS:2970:DPHI ca
+
+*UND_30_gap_act
+PHAS:UNDS:3070:GapAct ca
+*UND_30_gap_des
+PHAS:UNDS:3070:GapDes ca
+*UND_30_phase_integral
+PHAS:UNDS:3070:PIAct ca
+*UND_30_k
+USEG:UNDS:3050:KAct ca
+*UND_30_dphi
+PHAS:UNDS:3070:DPHI ca
+
+*UND_31_gap_act
+PHAS:UNDS:3170:GapAct ca
+*UND_31_gap_des
+PHAS:UNDS:3170:GapDes ca
+*UND_31_phase_integral
+PHAS:UNDS:3170:PIAct ca
+*UND_31_k
+USEG:UNDS:3150:KAct ca
+*UND_31_dphi
+PHAS:UNDS:3170:DPHI ca
+
+*UND_32_gap_act
+PHAS:UNDS:3270:GapAct ca
+*UND_32_gap_des
+PHAS:UNDS:3270:GapDes ca
+*UND_32_phase_integral
+PHAS:UNDS:3270:PIAct ca
+*UND_32_k
+USEG:UNDS:3250:KAct ca
+*UND_32_dphi
+PHAS:UNDS:3270:DPHI ca
+
+*UND_33_gap_act
+PHAS:UNDS:3370:GapAct ca
+*UND_33_gap_des
+PHAS:UNDS:3370:GapDes ca
+*UND_33_phase_integral
+PHAS:UNDS:3370:PIAct ca
+*UND_33_k
+USEG:UNDS:3350:KAct ca
+*UND_33_dphi
+PHAS:UNDS:3370:DPHI ca
+
+*UND_34_gap_act
+PHAS:UNDS:3470:GapAct ca
+*UND_34_gap_des
+PHAS:UNDS:3470:GapDes ca
+*UND_34_phase_integral
+PHAS:UNDS:3470:PIAct ca
+*UND_34_k
+USEG:UNDS:3450:KAct ca
+*UND_34_dphi
+PHAS:UNDS:3470:DPHI ca
+
+*UND_36_gap_act
+PHAS:UNDS:3670:GapAct ca
+*UND_36_gap_des
+PHAS:UNDS:3670:GapDes ca
+*UND_36_phase_integral
+PHAS:UNDS:3670:PIAct ca
+*UND_36_k
+USEG:UNDS:3650:KAct ca
+*UND_36_dphi
+PHAS:UNDS:3670:DPHI ca
+
+*UND_37_gap_act
+PHAS:UNDS:3770:GapAct ca
+*UND_37_gap_des
+PHAS:UNDS:3770:GapDes ca
+*UND_37_phase_integral
+PHAS:UNDS:3770:PIAct ca
+*UND_37_k
+USEG:UNDS:3750:KAct ca
+*UND_37_dphi
+PHAS:UNDS:3770:DPHI ca
+
+*UND_38_gap_act
+PHAS:UNDS:3870:GapAct ca
+*UND_38_gap_des
+PHAS:UNDS:3870:GapDes ca
+*UND_38_phase_integral
+PHAS:UNDS:3870:PIAct ca
+*UND_38_k
+USEG:UNDS:3850:KAct ca
+*UND_38_dphi
+PHAS:UNDS:3870:DPHI ca
+
+*UND_39_gap_act
+PHAS:UNDS:3970:GapAct ca
+*UND_39_gap_des
+PHAS:UNDS:3970:GapDes ca
+*UND_39_phase_integral
+PHAS:UNDS:3970:PIAct ca
+*UND_39_k
+USEG:UNDS:3950:KAct ca
+*UND_39_dphi
+PHAS:UNDS:3970:DPHI ca
+
+*UND_40_gap_act
+PHAS:UNDS:4070:GapAct ca
+*UND_40_gap_des
+PHAS:UNDS:4070:GapDes ca
+*UND_40_phase_integral
+PHAS:UNDS:4070:PIAct ca
+*UND_40_k
+USEG:UNDS:4050:KAct ca
+*UND_40_dphi
+PHAS:UNDS:4070:DPHI ca
+
+*UND_41_gap_act
+PHAS:UNDS:4170:GapAct ca
+*UND_41_gap_des
+PHAS:UNDS:4170:GapDes ca
+*UND_41_phase_integral
+PHAS:UNDS:4170:PIAct ca
+*UND_41_k
+USEG:UNDS:4150:KAct ca
+*UND_41_dphi
+PHAS:UNDS:4170:DPHI ca
+
+*UND_42_gap_act
+PHAS:UNDS:4270:GapAct ca
+*UND_42_gap_des
+PHAS:UNDS:4270:GapDes ca
+*UND_42_phase_integral
+PHAS:UNDS:4270:PIAct ca
+*UND_42_k
+USEG:UNDS:4250:KAct ca
+*UND_42_dphi
+PHAS:UNDS:4270:DPHI ca
+
+*UND_43_gap_act
+PHAS:UNDS:4370:GapAct ca
+*UND_43_gap_des
+PHAS:UNDS:4370:GapDes ca
+*UND_43_phase_integral
+PHAS:UNDS:4370:PIAct ca
+*UND_43_k
+USEG:UNDS:4350:KAct ca
+*UND_43_dphi
+PHAS:UNDS:4370:DPHI ca
+
+*UND_44_gap_act
+PHAS:UNDS:4470:GapAct ca
+*UND_44_gap_des
+PHAS:UNDS:4470:GapDes ca
+*UND_44_phase_integral
+PHAS:UNDS:4470:PIAct ca
+*UND_44_k
+USEG:UNDS:4450:KAct ca
+*UND_44_dphi
+PHAS:UNDS:4470:DPHI ca
+
+*UND_45_gap_act
+PHAS:UNDS:4570:GapAct ca
+*UND_45_gap_des
+PHAS:UNDS:4570:GapDes ca
+*UND_45_phase_integral
+PHAS:UNDS:4570:PIAct ca
+*UND_45_k
+USEG:UNDS:4550:KAct ca
+*UND_45_dphi
+PHAS:UNDS:4570:DPHI ca
+
+*UND_46_gap_act
+PHAS:UNDS:4670:GapAct ca
+*UND_46_gap_des
+PHAS:UNDS:4670:GapDes ca
+*UND_46_phase_integral
+PHAS:UNDS:4670:PIAct ca
+*UND_46_k
+USEG:UNDS:4650:KAct ca
+*UND_46_dphi
+PHAS:UNDS:4670:DPHI ca
+
+# Y Correctors for beam kick location
+*y_corr_und_35
+YCOR:UNDS:3580:BACT ca
+*y_corr_und_36
+YCOR:UNDS:3680:BACT ca
+*y_corr_und_37
+YCOR:UNDS:3780:BACT ca
+*y_corr_und_38
+YCOR:UNDS:3880:BACT ca
+*y_corr_und_39
+YCOR:UNDS:3980:BACT ca
+*y_corr_und_40
+YCOR:UNDS:4080:BACT ca
+*y_corr_und_41
+YCOR:UNDS:4180:BACT ca
+*y_corr_und_42
+YCOR:UNDS:4280:BACT ca
+*y_corr_und_43
+YCOR:UNDS:4380:BACT ca
+*y_corr_und_44
+YCOR:UNDS:4480:BACT ca
+*y_corr_und_45
+YCOR:UNDS:4580:BACT ca
+*y_corr_und_46
+YCOR:UNDS:4680:BACT ca
+

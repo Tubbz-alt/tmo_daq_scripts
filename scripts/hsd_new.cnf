@@ -1,0 +1,26 @@
+if not platform: platform = '6'
+
+import os
+ld_lib_path = 'LD_LIBRARY_PATH=%s/epics/lib/linux-x86_64:%s/pcas/lib/linux-x86_64'%((os.getenv('CONDA_PREFIX'),)*2)
+#epics_env = 'EPICS_PVA_ADDR_LIST=172.21.156.255'+' '+ld_lib_path
+epics_env = 'EPICS_PVA_ADDR_LIST=10.0.3.255'+' '+ld_lib_path
+hsd_epics_env = ld_lib_path
+
+conda_rel = os.environ['CONDA_DEFAULT_ENV']
+
+ioc_node = 'daq-tmo-hsd-01'
+pva_node = 'drp-neh-ctl002'
+hsd_epics = 'DAQ:TMO:HSD:1'
+hsd_ids = ['1b','1a','3e','3d','5e','da','b2']
+
+procmgr_config = []
+iport = 29071
+for hsd in hsd_ids:
+    for ch in ['a','b']:
+        procmgr_config.append({host:pva_node, id:'hsdpvs_{:}_{:}'.format(hsd,ch), port:'%d'%iport, flags:'s', conda:conda_rel, env:hsd_epics_env, cmd:'hsdpvs -P {:}_{:}:{:}'.format(hsd_epics,hsd.upper(),ch.upper())})
+        iport += 1
+
+for hsd in hsd_ids:
+    procmgr_config.append({host:ioc_node, id:'hsdioc_{:}'.format(hsd), port:'%d'%iport, flags:'s', conda:conda_rel, env:hsd_epics_env, cmd:f'hsd134PVs -E -P {hsd_epics}_{hsd.upper()} -d /dev/pcie_adc_{hsd} -D https://pswww.slac.stanford.edu/ws-auth/configdb/ws,tmo,hsd{hsd}_0,hsd{hsd}_1,L'})
+    iport += 1
+
