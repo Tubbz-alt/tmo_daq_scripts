@@ -1,8 +1,0 @@
-procmgr restart tmo.cnf ami-worker_0_0
-procmgr restart tmo.cnf ami-worker_0_1
-procmgr restart tmo.cnf ami-worker_0_2
-procmgr restart tmo.cnf ami-worker_0_3
-procmgr restart tmo.cnf ami-node_0
-procmgr restart tmo.cnf ami-manager
-procmgr restart tmo.cnf ami-client
-
